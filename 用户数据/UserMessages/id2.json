@@ -1,0 +1,11 @@
+{
+  "UserName": "test01",
+  "MessagesNumber": 1,
+  "data": {
+    "Messages_1": {
+      "MessagesName": "新的聊天",
+      "MessagesUpdateDate": 1714377198625,
+      "MessagesData": []
+    }
+  }
+}
