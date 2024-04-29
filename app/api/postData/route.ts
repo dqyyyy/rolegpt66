@@ -5,9 +5,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { writeFile, readFile, readFileSync, open,close, existsSync } from "fs"
 import path from "path";
 
-// const PathEnv = process.env.INIT_CWD
-// console.log("[PathEnv ] ",PathEnv);
-const PathEnv = ""
+const PathEnv = process.env.INIT_CWD
+console.log("[PathEnv ] ",PathEnv);
+
 const dataPath = PathEnv+"/用户数据/user.json"
 
 const userDBGet = () => {
