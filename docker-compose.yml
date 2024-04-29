@@ -24,6 +24,8 @@ services:
     image: yidadaa/chatgpt-next-web
     ports:
       - 3000:3000
+    volumes:
+      - ./用户数据:/用户数据
     environment:
       - OPENAI_API_KEY=$OPENAI_API_KEY
       - GOOGLE_API_KEY=$GOOGLE_API_KEY
