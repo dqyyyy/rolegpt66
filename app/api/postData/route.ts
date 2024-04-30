@@ -5,10 +5,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { writeFile, readFile, readFileSync, open,close, existsSync } from "fs"
 import path from "path";
 
-const PathEnv = process.env.INIT_CWD
-console.log("[PathEnv ] ",PathEnv);
 
-const dataPath = PathEnv+"/用户数据/user.json"
+const dataPath = "用户数据/user.json"
 
 const userDBGet = () => {
   // let JsonData = {};
@@ -38,7 +36,7 @@ const handle = async (req: NextRequest) => {
 
 
     if (body.type == "login") {
-      console.log("[login Data]  ", body);
+      // console.log("[login Data]  ", body);
       const userDB = userDBGet();
       const username = Object.values(userDB).map(user => (user?.UserName || ""));
       // console.log("[userDB] ", userDB["id1"]);
@@ -48,7 +46,7 @@ const handle = async (req: NextRequest) => {
       // return NextResponse.json({ body: JSON.stringify({user:"OKs"}) }, { status: 200 });
       else {
         const { UserPassWord, ...JsonUser } = userDB[USER_ID];
-        console.log("[UserPassWord ]", UserPassWord, body.UserPassWord, body.UserPassWord === UserPassWord);
+        // console.log("[UserPassWord ]", UserPassWord, body.UserPassWord, body.UserPassWord === UserPassWord);
         if (body.UserPassWord !== UserPassWord) {
           return NextResponse.json({ err: "密码错误" }, { status: 400 });
         }
@@ -68,7 +66,7 @@ const handle = async (req: NextRequest) => {
       const username = Object.values(userDB).map(user => (user.UserName || ""));
       // console.log("[userDB] ",userDB[body.UserName]);
       const userIndex = username.indexOf(body.UserName);
-      console.log("[username ]", Object.values(userDB));
+      // console.log("[username ]", Object.values(userDB));
       // console.log("[userIndex ]", userIndex);
       // console.log("[body.UserName ]", body.UserName);
       if (username.indexOf(body.UserName) != -1)
@@ -104,7 +102,6 @@ const handle = async (req: NextRequest) => {
         const newId = `id${Object.keys(parsedData).length + 1}`
         parsedData[newId] = {
           ...userData,
-          "MessagesNumber": 0
 
         };
         writeFile(dataPath, JSON.stringify(parsedData, null, 2), (err) => {
@@ -136,7 +133,7 @@ const handle = async (req: NextRequest) => {
       if (!body.USER_ID)
 
         return NextResponse.json({ err: "请登录使用" }, { status: 400 });
-      const path = PathEnv+"/用户数据/UserMessages/" + body.USER_ID + ".json"
+      const path = "用户数据/UserMessages/" + body.USER_ID + ".json"
       if (existsSync(path)) {
         data = readFileSync(path).toString();
 
