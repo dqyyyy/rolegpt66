@@ -4,7 +4,7 @@
   "data": {
     "Messages_1": {
       "MessagesName": "编程助手",
-      "MessagesUpdateDate": 1714624421478,
+      "MessagesUpdateDate": 1714625138017,
       "MessagesData": [
         {
           "id": "RsadyMngqP3A52VR5jviO",
@@ -130,6 +130,20 @@
           "role": "assistant",
           "content": "",
           "streaming": true,
+          "model": "gpt-3.5-turbo"
+        },
+        {
+          "id": "_dk1SQ7qwX9A2n_dxK-NU",
+          "date": "2024/5/2 12:45:27",
+          "role": "user",
+          "content": "你好"
+        },
+        {
+          "id": "mn7iyq7eiUd3EO0g-H96m",
+          "date": "2024/5/2 12:45:27",
+          "role": "assistant",
+          "content": "你好！当然，我会尽量给你提供提示来帮助你完成任务。首先，请问你对自己的Python编程水平有何感受？",
+          "streaming": false,
           "model": "gpt-3.5-turbo"
         }
       ]
