@@ -519,14 +519,6 @@ export function ChatActions(props: {
       
 
       <ChatAction
-        onClick={() => {
-          navigate(Path.Masks);
-        }}
-        text={Locale.Chat.InputActions.Masks}
-        icon={<MaskIcon />}
-      />
-
-      <ChatAction
         text={Locale.Chat.InputActions.Clear}
         icon={<BreakIcon />}
         onClick={() => {
@@ -1386,16 +1378,7 @@ function _Chat() {
                                   )
                                 }
                               /> 
-                              <ChatAction
-                                text={Locale.Chat.Actions.Like}
-                                icon={<LikeIcon />}
-                                onClick={() => alert('已点赞！')}
-                              />
-                              <ChatAction
-                                text={Locale.Chat.Actions.Dislike}
-                                icon={<DislikeIcon />}
-                                onClick={() => window.location.href = "https://www.example.com"}
-                              />
+                              
                             </>
                           )}
                         </div>
