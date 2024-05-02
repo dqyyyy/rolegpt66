@@ -26,6 +26,8 @@ import BreakIcon from "../icons/break.svg";
 import SettingsIcon from "../icons/chat-settings.svg";
 import DeleteIcon from "../icons/clear.svg";
 import PinIcon from "../icons/pin.svg";
+import DislikeIcon from "../icons/dislike.svg";
+import LikeIcon from "../icons/like.svg";
 import EditIcon from "../icons/rename.svg";
 import ConfirmIcon from "../icons/confirm.svg";
 import CancelIcon from "../icons/cancel.svg";
@@ -616,6 +618,7 @@ export function EditMessageModal(props: { onClose: () => void }) {
           context={messages}
           updateContext={(updater) => {
             const newMessages = messages.slice();
+            
             updater(newMessages);
             setMessages(newMessages);
           }}
@@ -1382,6 +1385,16 @@ function _Chat() {
                                     getMessageTextContent(message),
                                   )
                                 }
+                              /> 
+                              <ChatAction
+                                text={Locale.Chat.Actions.Like}
+                                icon={<LikeIcon />}
+                                onClick={() => alert('已点赞！')}
+                              />
+                              <ChatAction
+                                text={Locale.Chat.Actions.Dislike}
+                                icon={<DislikeIcon />}
+                                onClick={() => window.location.href = "https://www.example.com"}
                               />
                             </>
                           )}
