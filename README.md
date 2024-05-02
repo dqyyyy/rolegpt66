@@ -1,1 +1,1 @@
-# EDUChatNextWeb
+# ChatNextWeb
