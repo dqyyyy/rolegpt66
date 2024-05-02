@@ -536,16 +536,7 @@ export function MaskPage() {
               ))}
             </Select>
 
-            <IconButton
-              className={styles["mask-create"]}
-              icon={<AddIcon />}
-              text={Locale.Mask.Page.Create}
-              bordered
-              onClick={() => {
-                const createdMask = maskStore.create();
-                setEditingMaskId(createdMask.id);
-              }}
-            />
+            
           </div>
 
           <div>
@@ -573,30 +564,7 @@ export function MaskPage() {
                       navigate(Path.Chat);
                     }}
                   />
-                  {m.builtin ? (
-                    <IconButton
-                      icon={<EyeIcon />}
-                      text={Locale.Mask.Item.View}
-                      onClick={() => setEditingMaskId(m.id)}
-                    />
-                  ) : (
-                    <IconButton
-                      icon={<EditIcon />}
-                      text={Locale.Mask.Item.Edit}
-                      onClick={() => setEditingMaskId(m.id)}
-                    />
-                  )}
-                  {!m.builtin && (
-                    <IconButton
-                      icon={<DeleteIcon />}
-                      text={Locale.Mask.Item.Delete}
-                      onClick={async () => {
-                        if (await showConfirm(Locale.Mask.Item.DeleteConfirm)) {
-                          maskStore.delete(m.id);
-                        }
-                      }}
-                    />
-                  )}
+                  
                 </div>
               </div>
             ))}
