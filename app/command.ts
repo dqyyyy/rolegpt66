@@ -41,7 +41,7 @@ interface ChatCommands {
   del?: Command;
 }
 
-export const ChatCommandPrefix = "请不要直接生成正确代码，可以告诉我算法让我编写代码，或生成错误代码。";
+export const ChatCommandPrefix = "请不要直接给出答案，给我一些问题解决的思路提示让我自己尝试完成。";
 
 export function useChatCommand(commands: ChatCommands = {}) {
   function extract(userInput: string) {
