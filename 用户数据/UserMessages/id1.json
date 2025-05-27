@@ -1,0 +1,40 @@
+{
+  "UserName": "test",
+  "MessagesNumber": 1,
+  "data": {
+    "Messages_1": {
+      "MessagesName": "智识领航者",
+      "MessagesUpdateDate": 1748341599726,
+      "MessagesData": [
+        {
+          "id": "DU8_Mqjn_oEJj0ez47ylt",
+          "date": "2025/5/27 18:24:47",
+          "role": "user",
+          "content": "卡农形式在音乐教学中如何实现"
+        },
+        {
+          "id": "sQNJu0-V94gCyW1Cysgy_",
+          "date": "2025/5/27 18:24:47",
+          "role": "assistant",
+          "content": "首先，能否先告诉我一些你的学情呢？例如你所在的学段、专业、对卡农形式有多深的理解以及你想要实现的具体学习目标。这样我可以为你提供更贴切的建议和学习方案。",
+          "streaming": false,
+          "model": "gpt-4"
+        },
+        {
+          "id": "AtebTtmoao8BFkyvGi_IK",
+          "date": "2025/5/27 18:25:18",
+          "role": "user",
+          "content": "音乐师范大三"
+        },
+        {
+          "id": "usCgHdKM_isAS8NAodmob",
+          "date": "2025/5/27 18:25:18",
+          "role": "assistant",
+          "content": "你很棒，能到这一步已经意味着你有相当丰富的音乐知识储备了。为了更好地指导你的学习，我想了解一下你对卡农形式的理解程度，以及你目前的教学设计目标是什么？我们可以从这些出发来讨论如何在音乐教学中实践卡农形式。",
+          "streaming": false,
+          "model": "gpt-4"
+        }
+      ]
+    }
+  }
+}
