@@ -6,7 +6,7 @@ import { writeFile, readFile, readFileSync, open,close, existsSync } from "fs"
 import path from "path";
 
 
-const dataPath = "用户数据/user.json"
+const dataPath = "Userdata/user.json"
 
 const userDBGet = () => {
   // let JsonData = {};
@@ -133,7 +133,7 @@ const handle = async (req: NextRequest) => {
       if (!body.USER_ID)
 
         return NextResponse.json({ err: "请登录使用" }, { status: 400 });
-      const path = "用户数据/UserMessages/" + body.USER_ID + ".json"
+      const path = "Userdata/UserMessages/" + body.USER_ID + ".json"
       if (existsSync(path)) {
         data = readFileSync(path).toString();
 
